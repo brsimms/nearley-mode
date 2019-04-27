@@ -2,7 +2,7 @@
 ;;;     See https://nearley.js.org for details.
 
 ;;; Simple syntax highlighting
-(setq nearleyjs-highlights
+(setq nearley-highlights
       '(("#.*$" . font-lock-comment-face)            ;; Comment lines
         ("->" . font-lock-type-face)                 ;; Production rule
         ("^[ ]*|" . font-lock-type-face)             ;; Alt production rule
@@ -13,9 +13,9 @@
         ("\\b[A-Z]+\\b" . font-lock-keyword-face)    ;; Non-terminal (assumes all caps)
         ("(\\|)\\|\\[\\|\\]\\|{\\|}" . font-lock-negation-char-face))) ;; Parens
 
-;;; nearleyjs-mode
-(define-derived-mode nearleyjs-mode fundamental-mode "nearleyjs"
-  "Major mode for editing nearleyjs (.ne) grammars."
-  (setq font-lock-defaults '(nearleyjs-highlights)))
+;;; nearley-mode
+(define-derived-mode nearley-mode fundamental-mode "nearleyjs"
+  "Major mode for editing nearley (.ne) grammars."
+  (setq font-lock-defaults '(nearley-highlights)))
 
-(provide 'nearleyjs-mode)
+(provide 'nearley-mode)
